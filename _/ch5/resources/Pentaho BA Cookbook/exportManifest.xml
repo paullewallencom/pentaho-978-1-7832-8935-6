@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="03-12-2013 01:20:54 CET" exportBy="admin" rootFolder="/public/"/>
+    <ExportManifestEntity path="Pentaho BA Cookbook">
+        <ExportManifestProperty>
+            <EntityMetaData name="Pentaho BA Cookbook" createdDate="2013-10-13T14:07:31.523+02:00" isFolder="true" path="Pentaho BA Cookbook" isHidden="false" locale="en_US" title="Pentaho BA Cookbook"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho BA Cookbook/Interactive Rpt - Sample 1.prpti">
+        <ExportManifestProperty>
+            <EntityMetaData name="Interactive Rpt - Sample 1.prpti" createdDate="2013-11-29T22:14:10.392+01:00" isFolder="false" path="Pentaho BA Cookbook/Interactive Rpt - Sample 1.prpti" isHidden="false" locale="en_US" title="Interactive Rpt - Sample 1"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho BA Cookbook/Interactive Rpt - Sample 2.prpti">
+        <ExportManifestProperty>
+            <EntityMetaData name="Interactive Rpt - Sample 2.prpti" createdDate="2013-11-29T23:34:35.227+01:00" isFolder="false" path="Pentaho BA Cookbook/Interactive Rpt - Sample 2.prpti" isHidden="false" locale="en_US" title="Interactive Rpt - Sample 2"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho BA Cookbook/Interactive Rpt - Sample 3.prpti">
+        <ExportManifestProperty>
+            <EntityMetaData name="Interactive Rpt - Sample 3.prpti" createdDate="2013-11-30T00:05:02.607+01:00" isFolder="false" path="Pentaho BA Cookbook/Interactive Rpt - Sample 3.prpti" isHidden="false" locale="en_US" title="Interactive Rpt - Sample 3"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho BA Cookbook/Interactive Rpt - Sample 4.prpti">
+        <ExportManifestProperty>
+            <EntityMetaData name="Interactive Rpt - Sample 4.prpti" createdDate="2013-12-02T07:34:21.403+01:00" isFolder="false" path="Pentaho BA Cookbook/Interactive Rpt - Sample 4.prpti" isHidden="false" locale="en_US" title="Interactive Rpt - Sample 4"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho BA Cookbook/Interactive Rpt - Sample 5.prpti">
+        <ExportManifestProperty>
+            <EntityMetaData name="Interactive Rpt - Sample 5.prpti" createdDate="2013-12-02T23:01:36.352+01:00" isFolder="false" path="Pentaho BA Cookbook/Interactive Rpt - Sample 5.prpti" isHidden="false" locale="en_US" title="Interactive Rpt - Sample 5"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho BA Cookbook/Interactive Rpt - Sample 6.prpti">
+        <ExportManifestProperty>
+            <EntityMetaData name="Interactive Rpt - Sample 6.prpti" createdDate="2013-12-02T23:02:13.799+01:00" isFolder="false" path="Pentaho BA Cookbook/Interactive Rpt - Sample 6.prpti" isHidden="false" locale="en_US" title="Interactive Rpt - Sample 6"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho BA Cookbook/Interactive Rpt - Sample 7.prpti">
+        <ExportManifestProperty>
+            <EntityMetaData name="Interactive Rpt - Sample 7.prpti" createdDate="2013-12-02T23:09:52.496+01:00" isFolder="false" path="Pentaho BA Cookbook/Interactive Rpt - Sample 7.prpti" isHidden="false" locale="en_US" title="Interactive Rpt - Sample 7"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho BA Cookbook/Interactive Rpt - Sample 8.prpti">
+        <ExportManifestProperty>
+            <EntityMetaData name="Interactive Rpt - Sample 8.prpti" createdDate="2013-12-03T00:51:08.835+01:00" isFolder="false" path="Pentaho BA Cookbook/Interactive Rpt - Sample 8.prpti" isHidden="false" locale="en_US" title="Interactive Rpt - Sample 8"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="Pentaho BA Cookbook/Interactive Rpt - Sample 9.prpti">
+        <ExportManifestProperty>
+            <EntityMetaData name="Interactive Rpt - Sample 9.prpti" createdDate="2013-12-03T00:50:45.199+01:00" isFolder="false" path="Pentaho BA Cookbook/Interactive Rpt - Sample 9.prpti" isHidden="false" locale="en_US" title="Interactive Rpt - Sample 9"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>

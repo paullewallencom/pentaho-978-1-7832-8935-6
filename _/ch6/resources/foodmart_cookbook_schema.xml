@@ -1,0 +1,188 @@
+<Schema name="Cookbook Sample Schema">
+  <Cube name="Cookbook Sales" visible="true" cache="true" enabled="true">
+    <Table name="sales_fact_1998">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="store_id" highCardinality="false" name="Store">
+      <Hierarchy name="default" visible="true" hasAll="true" primaryKey="store_id">
+        <Table name="store">
+        </Table>
+        <Level name="Store Country" visible="true" column="store_country" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Store State" visible="true" column="store_state" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Store City" visible="true" column="store_city" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Store Name" visible="true" column="store_name" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+          <Property name="Store Type" column="store_type" type="String">
+          </Property>
+          <Property name="Store Manager" column="store_manager" type="String">
+          </Property>
+          <Property name="Store Sqft" column="store_sqft" type="Numeric">
+          </Property>
+          <Property name="Grocery Sqft" column="grocery_sqft" type="Numeric">
+          </Property>
+          <Property name="Frozen Sqft" column="frozen_sqft" type="Numeric">
+          </Property>
+          <Property name="Meat Sqft" column="meat_sqft" type="Numeric">
+          </Property>
+          <Property name="Has coffee bar" column="coffee_bar" type="Boolean">
+          </Property>
+          <Property name="Street address" column="store_street_address" type="String">
+          </Property>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="store_id" highCardinality="false" name="Store Type">
+      <Hierarchy visible="true" hasAll="true" primaryKey="store_id">
+        <Table name="store">
+        </Table>
+        <Level name="Store Type" visible="true" column="store_type" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="store_id" highCardinality="false" name="Store Size in SQFT">
+      <Hierarchy visible="true" hasAll="true" primaryKey="store_id">
+        <Table name="store">
+        </Table>
+        <Level name="Store Sqft" visible="true" column="store_sqft" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="promotion_id" highCardinality="false" name="Promotion Media">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Media" primaryKey="promotion_id">
+        <Table name="promotion">
+        </Table>
+        <Level name="Media Type" visible="true" column="media_type" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="promotion_id" highCardinality="false" name="Promotions">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Promotions" primaryKey="promotion_id">
+        <Table name="promotion">
+        </Table>
+        <Level name="Promotion Name" visible="true" column="promotion_name" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="product_id" highCardinality="false" name="Product">
+      <Hierarchy visible="true" hasAll="true" primaryKey="product_id" primaryKeyTable="product">
+        <Join leftKey="product_class_id" rightKey="product_class_id">
+          <Table name="product">
+          </Table>
+          <Table name="product_class">
+          </Table>
+        </Join>
+        <Level name="Product Family" visible="true" table="product_class" column="product_family" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Product Department" visible="true" table="product_class" column="product_department" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Product Category" visible="true" table="product_class" column="product_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Product Subcategory" visible="true" table="product_class" column="product_subcategory" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Brand Name" visible="true" table="product" column="brand_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Product Name" visible="true" table="product" column="product_name" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="customer_id" highCardinality="false" name="Customers">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Customers" primaryKey="customer_id">
+        <Table name="customer">
+        </Table>
+        <Level name="Country" visible="true" column="country" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="State Province" visible="true" column="state_province" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="City" visible="true" column="city" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Name" visible="true" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+          <KeyExpression>
+            <SQL dialect="mysql">
+              <![CDATA[CONCAT(`customer`.`fname`, ' ', `customer`.`lname`)]]>
+            </SQL>
+          </KeyExpression>
+          <Property name="Gender" column="gender" type="String">
+          </Property>
+          <Property name="Marital Status" column="marital_status" type="String">
+          </Property>
+          <Property name="Education" column="education" type="String">
+          </Property>
+          <Property name="Yearly Income" column="yearly_income" type="String">
+          </Property>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="customer_id" highCardinality="false" name="Education Level">
+      <Hierarchy visible="true" hasAll="true" primaryKey="customer_id">
+        <Table name="customer">
+        </Table>
+        <Level name="Education Level" visible="true" column="education" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="customer_id" highCardinality="false" name="Gender">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Gender" primaryKey="customer_id">
+        <Table name="customer">
+        </Table>
+        <Level name="Gender" visible="true" column="gender" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="customer_id" highCardinality="false" name="Marital Status">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Marital Status" primaryKey="customer_id">
+        <Table name="customer">
+        </Table>
+        <Level name="Marital Status" visible="true" column="marital_status" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension visible="true" foreignKey="customer_id" highCardinality="false" name="Yearly Income">
+      <Hierarchy visible="true" hasAll="true" primaryKey="customer_id">
+        <Table name="customer">
+        </Table>
+        <Level name="Yearly Income" visible="true" column="yearly_income" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="TimeDimension" visible="true" foreignKey="time_id" highCardinality="false" name="Time">
+      <Hierarchy visible="true" hasAll="false" primaryKey="time_id">
+        <Table name="time_by_day">
+        </Table>
+        <Level name="Year" visible="true" column="month_of_year" type="Integer" uniqueMembers="true" levelType="TimeYears" hideMemberIf="Never">
+        </Level>
+        <Level name="Quarter" visible="true" column="quarter" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never">
+        </Level>
+        <Level name="Month" visible="true" column="month_of_year" type="Integer" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Unit Sales" column="unit_sales" datatype="Numeric" formatString="Standard" aggregator="sum">
+    </Measure>
+    <Measure name="Store Cost" column="store_cost" datatype="Numeric" formatString="$#,###.00" aggregator="sum">
+    </Measure>
+    <Measure name="Store Sales" column="store_sales" datatype="Numeric" formatString="$#,###.00" aggregator="sum">
+    </Measure>
+    <Measure name="Sales Count" column="product_id" datatype="Numeric" formatString="#,###" aggregator="count">
+    </Measure>
+    <Measure name="Customer Count" column="customer_id" datatype="Numeric" formatString="#,###" aggregator="distinct-count">
+    </Measure>
+    <CalculatedMember name="Profit" dimension="Measures">
+      <Formula>
+        <![CDATA[[Measures].[Store Sales] - [Measures].[Store Cost]]]>
+      </Formula>
+      <CalculatedMemberProperty name="FORMAT_STRING" value="$#,##0.00">
+      </CalculatedMemberProperty>
+    </CalculatedMember>
+    <CalculatedMember name="Profit last Period" formula="COALESCEEMPTY((Measures.[Profit], [Time].[Time].PREVMEMBER),    Measures.[Profit])" dimension="Measures" visible="false">
+      <CalculatedMemberProperty name="FORMAT_STRING" value="$#,##0.00">
+      </CalculatedMemberProperty>
+      <CalculatedMemberProperty name="MEMBER_ORDINAL" value="18">
+      </CalculatedMemberProperty>
+    </CalculatedMember>
+    <CalculatedMember name="Profit Growth" formula="([Measures].[Profit] - [Measures].[Profit last Period]) / [Measures].[Profit last Period]" dimension="Measures" visible="true">
+      <CalculatedMemberProperty name="FORMAT_STRING" value="0.0%">
+      </CalculatedMemberProperty>
+    </CalculatedMember>
+  </Cube>
+</Schema>
